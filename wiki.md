@@ -1,6 +1,7 @@
 # Windows
 ## Visual Studio
 - it's HUGE! > 16GB
+- can do C#, F#, Python and C++
 # Linux
 ## Ansible
 ## git
