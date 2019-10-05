@@ -12,7 +12,7 @@
 3. run `nixos-generate-config --root /mnt`
 4. edit `/mnt/etc/nixos/configuration.nix`
 5. run `nixos-install`
-### Caveats
+### Caveats of root on ZFS
 - zfs support is built in but for grub to read from zfs the `boot.supportedFilesystems = ["zfs"];` option needs to be set
 - zfs on bios and a 4k sector drive will not work
 - grub is a bitch
