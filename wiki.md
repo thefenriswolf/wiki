@@ -1,3 +1,22 @@
+# Programming
+## C#
+### Data Types
+- byte: 0 - 255
+- short = int16: -32.768 - 32.767
+- int = int32: -2.1B - 2.1B
+- long = int64:
+- float = single/float: e.g.: 1.2f
+- double = long float:
+- decimal = long long float: e.g.: 1.2m
+- char: unicode
+- bool: Boolean
+
+### loops
+
+### if
+
+
+
 # Windows
 ## Visual Studio
 - it's HUGE! > 16GB
