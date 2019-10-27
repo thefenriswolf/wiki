@@ -4,7 +4,7 @@
   - [Ansible](#ansible)
   - [git](#git)
   - [ZFS](#zfs)
-    - [recyle drives from a former zfs array](#recyle-drives-from-a-former-zfs-array)
+    - [recycle drives from a former zfs array](#recycle-drives-from-a-former-zfs-array)
   - [NixOS](#nixos)
     - [Installation](#installation)
       - [Install script (convetional)](#install-script-convetional)
@@ -19,7 +19,7 @@
 ## Ansible
 ## git
 ## ZFS
-### recyle drives from a former zfs array
+### recycle drives from a former zfs array
 ZFS puts it's metadata in the first and last sectors of a drive. A drive with this metadata will show up as zfs_member for other utilities. The official way to wipe all traces of zfs from a drive is:
 
 ``` bash
