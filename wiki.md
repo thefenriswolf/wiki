@@ -1,3 +1,16 @@
+- [Windows](#windows)
+  - [Visual Studio](#visual-studio)
+- [Linux](#linux)
+  - [Ansible](#ansible)
+  - [git](#git)
+  - [ZFS](#zfs)
+    - [recyle drives from a former zfs array](#recyle-drives-from-a-former-zfs-array)
+  - [NixOS](#nixos)
+    - [Installation](#installation)
+      - [Install script (convetional)](#install-script-convetional)
+      - [Install script (zfs)](#install-script-zfs)
+    - [Caveats of root on ZFS](#caveats-of-root-on-zfs)
+
 # Windows
 ## Visual Studio
 - it's HUGE! > 16GB
@@ -29,6 +42,7 @@ dd if=/dev/zero of=/dev/sdXX bs=512 seek=$(( $(blockdev --getsz /dev/sdXX) - 409
 4. edit `/mnt/etc/nixos/configuration.nix`
 5. run `nixos-install`
 
+#### Install script (convetional)
 #### Install script (zfs)
 ```bash
 DISK=/dev/disk/by-id/ata-XXX
