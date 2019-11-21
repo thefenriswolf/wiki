@@ -6,6 +6,7 @@
   - [ZFS](#zfs)
     - [recycle drives from a former zfs array](#recycle-drives-from-a-former-zfs-array)
   - [NixOS](#nixos)
+    - [Build private packages](#build-private-packages)
     - [Installation](#installation)
       - [Install script (convetional)](#install-script-convetional)
       - [Install script (zfs)](#install-script-zfs)
@@ -35,6 +36,12 @@ dd if=/dev/zero of=/dev/sdXX bs=512 seek=$(( $(blockdev --getsz /dev/sdXX) - 409
 ```
 
 ## NixOS
+### Build private packages
+1. clone nixpkgs tree from Github `git clone https://github.com/NixOS/nixpkgs.git`
+2. `export NIX_PATH="nixpkgs=path/to/cloned/package/tree"`
+3. add `with import <nixpkgs> {};` at the top of pkg.nix
+4. run `nix-build pkg.nix`
+   
 ### Installation
 1. Partition and format disk
 2. mount root partition under `/mnt` and boot under `/mnt/boot`
