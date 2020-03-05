@@ -39,7 +39,8 @@ dd if=/dev/zero of=/dev/sdXX bs=512 seek=$(( $(blockdev --getsz /dev/sdXX) - 409
 ### Build private packages
 1. clone nixpkgs tree from Github `git clone https://github.com/NixOS/nixpkgs.git`
 2. `export NIX_PATH="nixpkgs=path/to/cloned/package/tree"`
-3. add `with import <nixpkgs> {};` at the top of pkg.nix
+3. add `{ pkgs ? import <nixpkgs> {} }:
+        with pkgs;` at the top of pkg.nix
 4. run `nix-build pkg.nix`
    
 ### Installation
