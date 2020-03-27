@@ -59,7 +59,9 @@ sgdisk -a1 -n2:34:2047 -t2:EF02 $DISK
 sgdisk -n3:1M:+512M -t3:EF00 $DISK
 # Partition 1 main ZFS partition, using up the remaining space
 sgdisk -n1:0:0 -t1:BF01 $DISK
-
+# copy partition table to another disk (raidX setup)
+sfdisk -d /dev/sda | sfdisk /dev/sdb
+# zpool creation
 zpool create \
  -O atime=off \
  -O compression=lz4 \
@@ -80,4 +82,5 @@ mount -t zfs rpool/home /mnt/home
 - zfs on bios and a 4k sector drive will not work
 - grub is a bitch
 - a `networking.hostId = "";` needs to be set
+use `head -c 8 /etc/machine-id` to get a machine specific hex string
 - users need to be in the zfs group
